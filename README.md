@@ -42,33 +42,70 @@ h2 {
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 15px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
-  padding: 10px 30px;
-  border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 8px 18px;
+  border-radius: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  max-width: 95%;
+  overflow-x: auto;
 }
 
+/* Remove scrollbar (mobile) */
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Menu */
 .navbar ul {
   display: flex;
-  gap: 25px;
+  gap: 16px;
   list-style: none;
+  white-space: nowrap;
 }
 
+/* Links */
 .navbar a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
+/* Active link */
 .navbar a.active {
   font-weight: 700;
   color: #000;
+  background: rgba(0, 0, 0, 0.05);
 }
+
+/* Hover (desktop only) */
+@media (hover: hover) {
+  .navbar a:hover {
+    background: rgba(0, 0, 0, 0.07);
+  }
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .navbar {
+    top: 8px;
+    padding: 6px 14px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
 
 /* ===== HERO ===== */
 #home {
