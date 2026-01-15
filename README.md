@@ -348,7 +348,7 @@ footer {
 
 <!-- HERO -->
 <section id="home">
-  <h2>Senior Tax Accountant</h1>
+  <h2></h1>
   <p><strong></string> </p>
 
   <div class="social">
